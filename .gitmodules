@@ -1,0 +1,9 @@
+[submodule "thirdparty/bhoptimer"]
+	path = thirdparty/bhoptimer
+	url = https://github.com/goodtrailer/bhoptimer
+[submodule "thirdparty/sm-ripext"]
+	path = thirdparty/sm-ripext
+	url = https://github.com/ErikMinekus/sm-ripext
+[submodule "thirdparty/DiscordWebhookAPI"]
+	path = thirdparty/DiscordWebhookAPI
+	url = https://github.com/Sarrus1/DiscordWebhookAPI

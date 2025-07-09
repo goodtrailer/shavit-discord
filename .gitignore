@@ -1,0 +1,12 @@
+# SourcePawn
+*.smx
+*.dll
+*.so
+
+build
+
+# editors
+*.atom-build.json
+.vscode/tasks.json
+
+\.vscode/settings\.json
