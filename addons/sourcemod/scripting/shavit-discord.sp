@@ -107,13 +107,25 @@ public void Shavit_OnWorldRecord(int client, int style, float time, int jumps, i
 
 int rgbToInt(char color[64]) {
     int val = 0;
-    for (int i = 1; i < sizeof(color); i++) {
+    int length = strlen(color);
+    for (int i = 1; i < length; i++)
         val = 256 * val + (color[i] - '0');
-    }
+
+    if (val < 0 || val >= 16777216)
+        return 0;
+
     return val;
 }
 
-void requestCallback (HTTPResponse response, any value) {}
+void requestCallback (HTTPResponse response, any value) {
+    PrintToServer("[shavit-discord] Response code: %d", response.Status);
+
+    char buf[2048];
+    if (!response.Data.ToString(buf, sizeof(buf), JSON_COMPACT))
+        PrintToServer("[shavit-discord] Failed to parse JSON response to string");
+    else
+        PrintToServer("[shavit-discord] JSON response:\n%s", buf);
+}
 
 void sendDiscordAnnouncement(int client, int style, float time, int jumps, int strafes, float sync, int track, float oldwr, float oldtime, float perfs)
 {
