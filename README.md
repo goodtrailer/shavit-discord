@@ -13,11 +13,9 @@ The embeds will look like this:
 
 ## Requirements ##
 - Sourcemod and Metamod
-- SMJansson (included)
 - SteamWorks (included)
 - Discord_api (included)
 - [SMRipExt](https://github.com/ErikMinekus/sm-ripext) (optional, only if you want the profile pictures)
-
 
 ## Installation ##
 1. Grab the latest release from the release page and unzip it in your sourcemod folder.
